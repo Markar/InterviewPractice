@@ -1,25 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import { phoneData, PhoneNumber } from "./Questions/PhoneNumber";
+import { AddCommas } from './Questions/Fundamentals/AddCommas';
+import { HtmlTable } from './Questions/React/HtmlTable';
+import { SortedArrays } from './Questions/DsAlgo/SortedArrays';
+import { NGram } from './Questions/DsAlgo/NGram';
+import { TwoSum } from './Questions/DsAlgo/TwoSum';
+import { PrefixSum } from './Questions/NextDoor/PrefixSum';
+import { LetterPhoneNumber } from './Questions/NextDoor/LetterPhoneNumber';
+import { EmployeeChart } from './Questions/NextDoor/Recusive';
+import { TicTacToe } from './Questions/React/TicTacToe';
+import { ToDo } from './Questions/React/Todo';
 
-function App() {
+export function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <HtmlTable /> */}
+      {/* <PhoneNumber data={phoneData}/> */}
+      {/* <AddCommas /> */}
+      {/* <SortedArrays /> */}
+      {/* <NGram /> */}
+      {/* <TwoSum /> */}
+      {/* <PrefixSum /> */}
+      {/* <LetterPhoneNumber /> */}
+      {/* <EmployeeChart /> */}
+      {/* <TicTacToe /> */}
+      <ToDo />
     </div>
   );
 }
-
-export default App;

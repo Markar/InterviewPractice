@@ -1,0 +1,1 @@
+// How to use console.log with bind() and apply()
