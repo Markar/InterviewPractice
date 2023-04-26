@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, createContext } from 'react';
 
 import { phoneData, PhoneNumber } from "./Questions/PhoneNumber";
 import { AddCommas } from './Questions/Fundamentals/AddCommas';
@@ -12,8 +12,14 @@ import { EmployeeChart } from './Questions/NextDoor/Recusive';
 import { TicTacToe } from './Questions/React/TicTacToe';
 import { ToDo } from './Questions/React/Todo';
 import { Counter } from './Questions/React/Counter';
+import { BlogPost } from './Questions/React/BlogPost';
+import { Refs } from './Questions/React/Refs';
+
+export const PostContext = createContext();
 
 export function Loader() {
+    const post = { title: "My Blog Post!" };
+
     const components = [
        'PhoneNumber',
        'AddCommas', 
@@ -26,15 +32,21 @@ export function Loader() {
        'EmployeeChart',
        'TicTacToe',
        'ToDo',
-       'Counter'
+       'Counter',
+       'ContextAPI',
+       'Refs'
     ];
 
-    const [component, setComponent] = useState('PhoneNumber');
+    const [component, setComponent] = useState(null);
 
     function handleComponentChange(comp) {
         setComponent(comp);
     }
  
+    function Blog() {
+        return <BlogPost />
+    }
+
     return (
         <>
             <div>
@@ -60,6 +72,12 @@ export function Loader() {
                 { component === 'ToDo' ? <ToDo /> : null }
                 { component === 'TwoSum' ? <TwoSum /> : null }
                 { component === 'Counter' ? <Counter /> : null }
+                { component === 'Refs' ? <Refs /> : null }
+                { component === 'ContextAPI' ? 
+                    <PostContext.Provider value={post}>
+                        <Blog />
+                    </PostContext.Provider> : null 
+                }
             </div>        
         </>
     );

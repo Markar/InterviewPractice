@@ -86,7 +86,7 @@ export function HtmlTable(props) {
           </tr>
         </thead>
         <tbody>
-        {renderData()}
+          {renderData()}
         </tbody>
       </table>        
     );
