@@ -27,7 +27,7 @@ export function PrefixSum(props) {
     <div>
       <h3>Prefix Sum for {input.toString()}</h3>
       <div>
-        Result: {result.toString()}
+        Result: {result ? result.toString() : null}
       </div>
     </div>
   );
