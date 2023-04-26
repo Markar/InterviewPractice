@@ -11,6 +11,7 @@ import { LetterPhoneNumber } from './Questions/NextDoor/LetterPhoneNumber';
 import { EmployeeChart } from './Questions/NextDoor/Recusive';
 import { TicTacToe } from './Questions/React/TicTacToe';
 import { ToDo } from './Questions/React/Todo';
+import { Counter } from './Questions/React/Counter';
 
 export function App() {
   return (
@@ -25,7 +26,8 @@ export function App() {
       {/* <LetterPhoneNumber /> */}
       {/* <EmployeeChart /> */}
       {/* <TicTacToe /> */}
-      <ToDo />
+      {/* <ToDo /> */}
+      <Counter />
     </div>
   );
 }
