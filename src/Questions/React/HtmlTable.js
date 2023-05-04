@@ -15,7 +15,7 @@ const rowClass = {
   height: "50px"
 };
 
-export function HtmlTable(props) {    
+export default function HtmlTable(props) {    
     const [data, setData] = useState([
       {
         fn: "Tyler",

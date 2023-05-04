@@ -18,7 +18,7 @@ const list = [
   { text: 'Test 2', id: 1, checked: true },
 ];
 
-export function ToDo(props) {
+export default function ToDo(props) {
   const [todoList, setTodoList] = useState(list);
   const [open, setOpen] = useState(false);
   const [newText, setNewText] = useState('');

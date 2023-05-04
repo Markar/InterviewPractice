@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 // Add commas in-between each character of a string. 
 // Do this in such a way so that I could execute: 'hello'.addCommas()
   
-export function AddCommas(props) {    
+export default function AddCommas(props) {    
     const [data, setData] = useState("hello");
     const [formattedData, setFormattedData] = useState(props.data || []);
     

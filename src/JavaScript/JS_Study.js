@@ -1,4 +1,4 @@
-// Big int type, n at the end, typeof will = BigInt
+// Big int type, n at the end, typeof will be BigInt
 const bigInt = 1234567890123456789012345678901234567890n;
 
 //Type Conversions

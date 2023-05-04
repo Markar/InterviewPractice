@@ -8,7 +8,7 @@ import React from 'react';
 // sum = 8
 // output =[ [9, -1], [2, 6] ]
   
-export function TwoSum(props) {    
+export default function TwoSum(props) {    
     const nums = [2,7,11,15,9,0]; // target 9
     const nums2 = [3,2,4];    // target 6
     const nums3 = [9, 2, 42, 4, -1, 6]; // target 8

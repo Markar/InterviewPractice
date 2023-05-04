@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // Question from Nutanix
-export function Counter() {
+export default function Counter() {
     const [count, setCount] = useState(0);
 
     function handleCount(amount) {

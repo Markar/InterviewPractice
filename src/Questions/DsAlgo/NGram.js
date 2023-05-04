@@ -8,7 +8,7 @@ import React, { useState, useEffect } from 'react';
   Modify this to return the most frequent one. 
 */
 
-export function NGram(props) {
+export default function NGram(props) {
   const data2 = "abcdabxe";
   const data = "abcdabxedada";
   const len = 2;

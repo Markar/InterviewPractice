@@ -1,0 +1,37 @@
+.art1 { grid-area: mid1; }
+.art2 { grid-area: mid2; }
+.art3 { grid-area: mid3; }
+.art4 { grid-area: b1; }
+.art5 { grid-area: b2; }
+
+
+.grid-container {
+    display: grid;
+    grid-template-areas:     
+    'mid1 mid2 mid3'
+    'b1 b2 b2';  
+    width: 800px;      
+}
+.grid-container > article {    
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;    
+    border: solid black;
+    font-size: 13px;
+}
+
+.grid-container > article > h4 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.grid-container > article > div {
+    margin-bottom: 20px;
+}
+
+.navbar {    
+    font-size: 30px;
+    margin: 20px;
+    border: solid black;
+    font-weight: 700;
+}

@@ -7,7 +7,7 @@ import React, { useState } from 'react';
 // Merge two lists in ascending order to a new list with a max length of K.
 
 
-export function SortedArrays(props) {
+export default function SortedArrays(props) {
   const arr1 = [1, 3, 5, 7];
   const arr2 = [2, 4, 6, 8];
 

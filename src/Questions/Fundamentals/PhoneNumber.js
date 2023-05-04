@@ -1,20 +1,8 @@
 import React, { useState } from 'react';
+import { PhoneData } from './PhoneData';
 // implement a react component that takes in the following phone numbers and outputs them in standard (xxx) xxx-xxxx format
 
-export const phoneData = [
-    "(408) 345-9256",
-    "(213) 639-2633",
-    "(415) 876-5539",
-    "415-876-5539",
-    "4158765539",
-    "408-345-9256",
-    "<415_trolley>",
-    "212.867.5309",
-    "213-NEW-CODE",
-    "--<<415^troll^39>>--",
-  ];
-  
-export function PhoneNumber(props) {    
+export default function PhoneNumber(props) {    
     const [number, setNumber] = useState();
     const [formattedData, setFormattedData] = useState(props.data || []);
     

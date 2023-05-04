@@ -14,7 +14,7 @@ User -> name, email, created, lastlogin
 
 # Encoding the URL
 Generate MD5 or SHA256 hash of the URL with base64 encoding
-Using base64 encoding, a 6 letters long key would result in 64^6 = ~68.7 billion possible strings.
+Using base64 encoding, a 6 letter long key would result in 64^6 = ~68.7 billion possible strings.
 
 # Infrastructure
 Client -> LoadBalancer -> Web Server -> Write & Read API -> Memory Cache -> DB

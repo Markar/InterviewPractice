@@ -175,7 +175,7 @@ const students = new Set(["Wes", "Kara", "Tony"]);
 students.has("Wes"); // true
 students.has("Wesley"); // false
 
-// useful for adding new items to an iterator while its being iterated on, like a queue
+// useful for adding new items to an iterator while it's being iterated on, like a queue
 const brunch = new Set();
 // as people start coming in
 brunch.add("wes");

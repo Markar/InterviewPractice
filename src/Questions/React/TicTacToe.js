@@ -12,7 +12,7 @@ const rowClass = {
   },
 };
 
-export function TicTacToe(props) {    
+export default function TicTacToe(props) {    
 
   const handleClick = (cell) => {
     console.log('cell', cell);
