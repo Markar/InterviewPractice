@@ -7,6 +7,7 @@ https://github.com/donnemartin/system-design-primer
 // input = [9, 2, 42, 4, -1, 6]
 // sum = 8
 // output =[ [9, -1], [2, 6] ]
+// The key here is the moving cursor with j = i+1
 
 var twoSum = function(nums, target) {
     let sums = [];
@@ -27,7 +28,8 @@ var twoSum = function(nums, target) {
 };
 
 //C)
-// implement a react component that takes in the following phone numbers and outputs them in standard (xxx) xxx-xxxx format
+// implement a react component that takes in the following phone numbers and outputs
+// them in standard (xxx) xxx-xxxx format
 
 const valuesIn = [
       "(408) 345-9256",
@@ -114,8 +116,10 @@ const valuesIn = [
 // a walk to remember,
 // the zebra,
 
-F)
+// F)
 // what order does this output and why
+// a, c, b because of the js event loop 
+// promises resolve as a microtask and timeout resolves as a macrotask
 (function () {
   function bob() {
     console.log("a");
