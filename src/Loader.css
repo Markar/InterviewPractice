@@ -1,0 +1,36 @@
+
+.tab-nav {
+  min-width: 1024px;
+  display: flex;  
+  justify-content: center;
+  align-items: center;  
+  border: 1px solid black;
+  background-color: darkolivegreen;
+}
+
+.tab {  
+  color: gray;
+  border: 2px solid aliceblue;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 10px;
+  width: 150px;
+  background-color: azure;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.nav-header {
+  color: darkolivegreen;
+  font-size: 25px;
+}
+
+.button {
+  background-color: azure;
+  color: darkolivegreen;
+  border: 2px solid aliceblue;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 10px;
+  font-size: 15px;
+}

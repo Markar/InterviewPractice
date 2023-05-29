@@ -4,11 +4,11 @@ https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design
 # Prefer mapping to individual resources and making sequential calls
 ![alt text](./API%20Example.png)
 
+- Make a request to the first URI to get this customer's orders
 https://adventure-works.com/customers/1/orders
-https://adventure-works.com/orders/99/products
 
-- Make a request to the first URI to get custom 1's orders
-- Then use that order info to make a request for order 99's products
+- Then use the customer's order info to make request products for that order
+https://adventure-works.com/orders/99/products
 
 # Avoid requiring resource URIs more complex than collection/item/collection.
 https://adventure-works.com/customers/1/orders/99/products

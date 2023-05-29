@@ -1,103 +1,136 @@
 import React, { useState, createContext } from 'react';
+import './Loader.css';
 
 import { AddCommas, PhoneData, PhoneNumber, PrefixSum, LetterPhoneNumber } from "./Questions/Fundamentals";
 import { SortedArrays, NGram, TwoSum, Sudoku } from './Questions/DsAlgo';
 import { EmployeeChart } from './Questions/NextDoor/Recusive';
-import { HtmlTable, TicTacToe, BlogPost, Refs, ToDo, Counter, Newspaper } from './Questions/React';
+import { DataFetch, HtmlTable, TicTacToe, BlogPost, Refs, ToDo, Counter, Newspaper } from './Questions/React';
 
 export const PostContext = createContext();
 
 export function Loader() {
-    const post = { title: "My Blog Post!" };
+  const [tab, setTab] = useState(0);
+  const [component, setComponent] = useState(null);
 
-    const DsAlgo = [
-        'SortedArrays',
-        'NGram',
-        'TwoSum',
-        'Sudoku'
-    ];
+  const navSections = ['React', 'DS Algo', 'Fundamentals'];
+  const post = { title: "My Blog Post!" };
 
-    const Fundamentals = [
-        'AddCommas',
-        'BindApply',
-        'EmployeeChart',
-        'LetterPhoneNumber',
-        'PhoneNumber',
-        'PrefixSum'
-    ];
+  const DsAlgo = [
+    'SortedArrays',
+    'NGram',
+    'TwoSum',
+    'Sudoku'
+  ];
 
-    const ReactComponents = [
-        'ContextAPI',
-        'Counter',
-        'HtmlTable',
-        'Refs',
-        'TicTacToe',
-        'ToDo',
-        'Newspaper'
-    ];    
+  const Fundamentals = [
+    'AddCommas',
+    'BindApply',
+    'EmployeeChart',
+    'LetterPhoneNumber',
+    'PhoneNumber',
+    'PrefixSum'
+  ];
 
-    const [component, setComponent] = useState(null);
+  const ReactComponents = [
+    'ContextAPI',
+    'Counter',
+    'HtmlTable',
+    'Refs',
+    'TicTacToe',
+    'ToDo',
+    'Newspaper',
+    'DataFetch'
+  ];
 
-    function handleComponentChange(comp) {
-        setComponent(comp);
-    }
+  function handleComponentChange(comp) {
+    setComponent(comp);
+  }
 
-    function Blog() {
-        return <BlogPost />
-    }
+  function Blog() {
+    return <BlogPost />
+  }
 
-    return (
-        <>
-            <div>
-                <h3>React</h3>
-                {ReactComponents.map((comp) => {
-                    return (
-                        <button key={comp} onClick={() => handleComponentChange(comp)}>
-                            {comp}
-                        </button>
-                    );
-                })}
+  function handleTabChange(number) {
+    console.log('clicked', number);
+    setTab(number);
+  }
 
-                <h3>DsAlgo</h3>
-                {DsAlgo.map((comp) => {
-                    return (
-                        <button key={comp} onClick={() => handleComponentChange(comp)}>
-                            {comp}
-                        </button>
-                    );
-                })}
-
-                <h3>Fundamentals</h3>
-                {Fundamentals.map((comp) => {
-                    return (
-                        <button key={comp} onClick={() => handleComponentChange(comp)}>
-                            {comp}
-                        </button>
-                    );
-                })}
+  return (
+    <>
+      <div className="tab-nav">
+        {navSections.map((section, index) => {
+          return (
+            <div key={index} className="tab" onClick={() => handleTabChange(index)}>
+              {section}
             </div>
-            <div>
-                {component === 'PhoneNumber' ? <PhoneNumber data={PhoneData} /> : null}
-                {component === 'AddCommas' ? <AddCommas /> : null}
-                {component === 'HtmlTable' ? <HtmlTable /> : null}
-                {component === 'SortedArrays' ? <SortedArrays /> : null}
-                {component === 'NGram' ? <NGram /> : null}
-                {component === 'PrefixSum' ? <PrefixSum /> : null}
-                {component === 'LetterPhoneNumber' ? <LetterPhoneNumber /> : null}
-                {component === 'EmployeeChart' ? <EmployeeChart /> : null}
-                {component === 'TicTacToe' ? <TicTacToe /> : null}
-                {component === 'ToDo' ? <ToDo /> : null}
-                {component === 'TwoSum' ? <TwoSum /> : null}
-                {component === 'Counter' ? <Counter /> : null}
-                {component === 'Refs' ? <Refs /> : null}
-                {component === 'Newspaper' ? <Newspaper /> : null}
-                {component === 'ContextAPI' ?
-                    <PostContext.Provider value={post}>
-                        <Blog />
-                    </PostContext.Provider> : null
-                }
-                {component === 'Sudoku' ? <Sudoku /> : null}
-            </div>
-        </>
-    );
+          )
+        })}
+
+      </div>
+
+      <div>
+        {tab === 0 &&
+          <div>
+            <h3 className="nav-header">React</h3>
+            {ReactComponents.map((comp) => {
+              return (
+                <button className="button" key={comp} onClick={() => handleComponentChange(comp)}>
+                  {comp}
+                </button>
+              );
+            })}
+          </div>}
+
+        {tab === 1 &&
+          <div>
+            <h3 className="nav-header">DsAlgo</h3>
+            {DsAlgo.map((comp) => {
+              return (
+                <button key={comp} onClick={() => handleComponentChange(comp)}>
+                  {comp}
+                </button>
+              );
+            })}
+          </div>
+        }
+
+        {tab === 2 &&
+          <div>
+            <h3 className="nav-header">Fundamentals</h3>
+            {Fundamentals.map((comp) => {
+              return (
+                <button key={comp} onClick={() => handleComponentChange(comp)}>
+                  {comp}
+                </button>
+              );
+            })}
+          </div>                 
+        }
+      </div>
+
+      <div>
+        {component === 'PhoneNumber' ? <PhoneNumber data={PhoneData} /> : null}
+        {component === 'AddCommas' ? <AddCommas /> : null}
+        {component === 'HtmlTable' ? <HtmlTable /> : null}
+        {component === 'SortedArrays' ? <SortedArrays /> : null}
+        {component === 'NGram' ? <NGram /> : null}
+        {component === 'PrefixSum' ? <PrefixSum /> : null}
+        {component === 'LetterPhoneNumber' ? <LetterPhoneNumber /> : null}
+        {component === 'EmployeeChart' ? <EmployeeChart /> : null}
+        {component === 'TicTacToe' ? <TicTacToe /> : null}
+        {component === 'ToDo' ? <ToDo /> : null}
+        {component === 'TwoSum' ? <TwoSum /> : null}
+        {component === 'Counter' ? <Counter /> : null}
+        {component === 'Refs' ? <Refs /> : null}
+        {component === 'Newspaper' ? <Newspaper /> : null}
+        {component === 'ContextAPI' ?
+          <PostContext.Provider value={post}>
+            <Blog />
+          </PostContext.Provider> : null
+        }
+        {component === 'Sudoku' ? <Sudoku /> : null}
+        {component === 'DataFetch' ? <DataFetch /> : null}
+      </div>
+    </>
+  );
 }

@@ -9,7 +9,7 @@ Let’s assume a 100:1 ratio between read and write.
 
 # Database
 The data isn't very relational, so prefer NOSQL
-URL-> originalURL, created, expires, userid
+URL -> originalURL, created, expires, userid
 User -> name, email, created, lastlogin
 
 # Encoding the URL
