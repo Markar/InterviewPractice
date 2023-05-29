@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { getTicketIds, getTicket } from '../../data'
+import { getTicketIds, getTicket } from '../data'
 
 var card = {
   padding: '2em'

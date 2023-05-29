@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { PostContext } from '../../Loader';
+import { PostContext } from '../Loader';
 
 export default function BlogPost() {
     const post = useContext(PostContext)

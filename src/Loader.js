@@ -4,7 +4,7 @@ import './Loader.css';
 import { AddCommas, PhoneData, PhoneNumber, PrefixSum, LetterPhoneNumber } from "./Questions/Fundamentals";
 import { SortedArrays, NGram, TwoSum, Sudoku } from './Questions/DsAlgo';
 import { EmployeeChart } from './Questions/NextDoor/Recusive';
-import { DataFetch, HtmlTable, TicTacToe, BlogPost, Refs, ToDo, Counter, Newspaper } from './Questions/React';
+import { DataFetch, HtmlTable, TicTacToe, BlogPost, Refs, ToDo, Counter, Newspaper } from './React';
 
 export const PostContext = createContext();
 

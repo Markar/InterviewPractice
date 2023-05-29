@@ -16,7 +16,7 @@ const Card = (props) => {
   );
 };
 
-export default function EmployeeChart(props) {
+export function EmployeeChart(props) {
   return (
     <div>
       <b>
