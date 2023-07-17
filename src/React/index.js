@@ -7,5 +7,19 @@ import ToDo from "./Todo";
 import { Newspaper } from "./Newspaper";
 import { DataFetch } from "./DataFetch";
 import { EmployeeChart } from "./EmployeeChart";
+import { TrainerBelt } from "./TrainerBelt/TrainerBelt";
+import { ParkingGarage } from "./ParkingGarage";
 
-export { TicTacToe, HtmlTable, BlogPost, Refs, Counter, ToDo, Newspaper, DataFetch, EmployeeChart };
+export {
+  TrainerBelt,
+  TicTacToe,
+  HtmlTable,
+  BlogPost,
+  Refs,
+  Counter,
+  ToDo,
+  Newspaper,
+  DataFetch,
+  EmployeeChart,
+  ParkingGarage,
+};

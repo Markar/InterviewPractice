@@ -24,3 +24,16 @@ const singleNumberSet = function(nums) {
 
 let setResult = singleNumberSet(nums);
 console.log('set result: ', setResult);
+
+
+var singleNumber = function(nums) {
+    let set = new Set();
+    nums.map(num => {
+        if (!set.has(num)) {
+            set.add(num);
+        } else {        
+            set.delete(num);
+        }
+    });    
+    return [...set][0];
+};
