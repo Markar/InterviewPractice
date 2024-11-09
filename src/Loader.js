@@ -9,7 +9,6 @@ import {
   LetterPhoneNumber,
 } from "./Questions/Fundamentals";
 import { SortedArrays, NGram, TwoSum, Sudoku } from "./Questions/DsAlgo";
-import { EmployeeChart } from "./Questions/NextDoor/Recusive";
 import {
   DataFetch,
   HtmlTable,
@@ -20,6 +19,7 @@ import {
   Counter,
   Newspaper,
   ParkingGarage,
+  EmployeeChart,
 } from "./React";
 import { TrainerBelt } from "./React/TrainerBelt/TrainerBelt";
 
@@ -54,6 +54,7 @@ export function Loader() {
     "Newspaper",
     "DataFetch",
     "ParkingGarage",
+    "EmployeeChart",
   ];
 
   function handleComponentChange(comp) {
